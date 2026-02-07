@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Devstética</title>
+
+  <style>
+     body {
+      margin: 0;
+      margin-top: 200px; /* para que no lo tape el header */
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+ header {
+  background-color: lightseagreen;
+  padding: 5px;
+  color: #ebe8e8;
+  text-align: center;
+  position: fixed;
+  width:100%;
+  top: 0;
+  z-index: 50;
+}
+
+nav { 
+    float: right;
+ }
+
+nav ul { 
+    list-style: none;
+     overflow: hidden; 
+    }
+
+
+nav ul li { 
+    
+    float: left;
+     font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+     } 
+
+nav ul li a { 
+    display: block; 
+    padding: 10px;
+     margin-right: 15px;
+     color: #eee4e4;
+      text-decoration: none; 
+    }
+
+    .center {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+
+#inicio .principal {
+  font-size: 1.6rem;
+}
+
+#inicio .secundario {
+  font-size: 1.1rem;
+}
+
+
+.equipo h2 {
+  color: white;
+  background-color: lightseagreen;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 40px;
+}
+
+
+.equipo {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.equipo h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Foto grupal */
+.foto-grupal img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+/* Contenedor de integrantes */
+.integrantes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Tarjeta persona */
+.persona img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.nombre {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.rol {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+
+/* Contenedor de servicios */
+.servicio h2 {
+  color: white;
+  background-color: lightseagreen;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 5px;
+}
+
+
+.servicio {
+  text-align: center;
+  padding: 10px 5px;
+}
+
+.servicio h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+
+/* Contenedor de servicios */
+.servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Tarjeta persona */
+.servicio img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.servicio {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.rol {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+
+/* Contenedor de contacto */
+.contacto h2 {
+  color: white;
+  background-color: lightseagreen;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 5px;
+}
+
+
+.contacto {
+  text-align: center;
+  padding: 10px 5px;
+}
+
+.contacto h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contacto-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 18px;
+  color: white;
+  transition: 0.3s;
+}
+
+.ig {
+  background: #E1306C;
+}
+
+.cita {
+  background: #25D366;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .integrantes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .integrantes {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .servicios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .servicios {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .contacto {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .contacto {
+    grid-template-columns: 1fr;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>DEVSTÉTICA</h1>
+
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#quienes">¿Quienes somos?</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<div id="inicio" class="center" >
+  <p  class="principal"> Bienvenido a Devstética.</p> 
+
+    <p class="principal">Aquí encontrarás información sobre nuestro equipo y los servicios que ofrecemos.</p>
+
+  <p class="principal" >Te invitamos a conocernos y a descubrir tu belleza natural</p>
+
+</div>
+
+<section id="quienes" class="equipo">
+
+  <h2>Quiénes Somos</h2>
+
+  <!-- Foto grupal -->
+  <div class="foto-grupal">
+    <img src="c:\Users\SHEDYMAR\Desktop\web rosangel\img\equipo bienestar.png" alt="Equipo Devstética">
+  </div>
+
+  <!-- Integrantes -->
+  <div class="integrantes">
+
+    <div class="persona">
+      <img src="c:\Users\SHEDYMAR\Desktop\web rosangel\img\equipo 1.png" alt="servicio 1">
+      <p class="nombre">Romina Escalante</p>
+      <p class="rol">Especilista En Masajes adelgasantes</p>
+    </div>
+
+    <div class="persona">
+      <img src="c:\Users\SHEDYMAR\Desktop\web rosangel\img\equipo 2.png" alt="servicio 2">
+      <p class="nombre">Beatriz Carrero</p>
+      <p class="rol">Maniquiure</p>
+    </div>
+
+    <div class="persona">
+      <img src="c:\Users\SHEDYMAR\Desktop\web rosangel\img\equipo 3.png" alt="servicio 3">
+      <p class="nombre">Isabel Peralta</p>
+      <p class="rol">MIcroneedling</p>
+    </div>
+
+    <div class="persona">
+      <img src="c:\Users\SHEDYMAR\Desktop\web rosangel\img\equipo 4.png" alt="servicio 4">
+      <p class="nombre">Juna de Arco</p>
+      <p class="rol">Depilacion Laser</p>
+    </div>
+
+    <div class="persona">
+      <img src="c:\Users\SHEDYMAR\Desktop\web rosangel\img\equipo 5.png" alt="servicio 5">
+      <p class="nombre">Antonela Pascuale</p>
+      <p class="rol">Dermaplanning</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="servicios" class="servicio">
+
+  <h2>Servicios</h2>
+
+
+
+<div class="servicios">
+
+  <div class="servicio">
+    <img src="img/accion masaje.png">
+    <p>Acción Masaje</p>
+  </div>
+
+  <div class="servicio">
+    <img src="img/relleno facial.png">
+    <p>Relleno Facial</p>
+  </div>
+
+  <div class="servicio">
+    <img src="img/lifting.png">
+    <p>Lifting</p>
+  </div>
+
+  <div class="servicio">
+    <img src="img/Pediquiure.png">
+    <p>Pedicura</p>
+  </div>
+
+  <div class="servicio">
+    <img src="img/maniquiure.png">
+    <p>Manicura</p>
+  </div>
+
+</div>
+
+</section>
+
+
+<section id="contacto" class="contacto">
+
+  <h2>Contacto</h2>
+
+<div class="contacto-box">
+
+  <a href="https://www.instagram.com/devsestetica?igsh=MW8wZnAxODR3d201MQ==" target="_blank" class="btn ig">
+    <i class="fa-brands fa-instagram"></i>
+    <span>Instagram</span>
+    
+  </a>
+
+  <a href="https://www.neocita.com/devsestetica?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAP0IdxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafw3UkIeKNtxlPfmgwRJK874BPze5pgG_KNOZQljdeIqjVj4PdLQGBGqZDaLQ_aem_bOpcNPTJDRdcnnqq_ei2jw target="_blank" class="btn cita">
+    <i class="fa-solid fa-calendar-days"></i>
+    <span>Pedir Cita</span>
+  </a>
+
+</div>
+
+</section>
+
+</body>
+</html>
