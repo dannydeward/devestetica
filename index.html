@@ -2,282 +2,93 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Questrial&family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <title>Devstética</title>
-
-  <style>
-     body {
-      margin: 0;
-      margin-top: 200px; /* para que no lo tape el header */
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-
- header {
-  background-color: lightseagreen;
-  padding: 5px;
-  color: #ebe8e8;
-  text-align: center;
-  position: fixed;
-  width:100%;
-  top: 0;
-  z-index: 50;
-}
-
-nav { 
-    float: right;
- }
-
-nav ul { 
-    list-style: none;
-     overflow: hidden; 
-    }
-
-
-nav ul li { 
-    
-    float: left;
-     font-family: Arial, Helvetica, sans-serif;
-      font-size: 20px;
-     } 
-
-nav ul li a { 
-    display: block; 
-    padding: 10px;
-     margin-right: 15px;
-     color: #eee4e4;
-      text-decoration: none; 
-    }
-
-    .center {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-
-}
-
-
-#inicio .principal {
-  font-size: 1.6rem;
-}
-
-#inicio .secundario {
-  font-size: 1.1rem;
-}
-
-
-.equipo h2 {
-  color: white;
-  background-color: lightseagreen;
-  text-align: center;
-  padding: 20px 0;
-  margin-bottom: 40px;
-}
-
-
-.equipo {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.equipo h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-/* Foto grupal */
-.foto-grupal img {
-  width: 100%;
-  max-width: 800px;
-  border-radius: 10px;
-  margin-bottom: 50px;
-}
-
-/* Contenedor de integrantes */
-.integrantes {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Tarjeta persona */
-.persona img {
-  width: 100%;
-  max-width: 200px;
-  border-radius: 10px;
-}
-
-.nombre {
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.rol {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-
-
-/* Contenedor de servicios */
-.servicio h2 {
-  color: white;
-  background-color: lightseagreen;
-  text-align: center;
-  padding: 10px 0;
-  margin-bottom: 5px;
-}
-
-
-.servicio {
-  text-align: center;
-  padding: 10px 5px;
-}
-
-.servicio h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-
-/* Contenedor de servicios */
-.servicios {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 9px;
-  max-width: 1500px;
-  margin: 0 auto;
-}
-
-/* Tarjeta persona */
-.servicio img {
-  width: 100%;
-  max-width: 200px;
-  border-radius: 10px;
-}
-
-.servicio {
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.rol {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-
-
-/* Contenedor de contacto */
-.contacto h2 {
-  color: white;
-  background-color: lightseagreen;
-  text-align: center;
-  padding: 10px 0;
-  margin-bottom: 5px;
-}
-
-
-.contacto {
-  text-align: center;
-  padding: 10px 5px;
-}
-
-.contacto h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.contacto-box {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  text-decoration: none;
-  padding: 15px 30px;
-  border-radius: 30px;
-  font-size: 18px;
-  color: white;
-  transition: 0.3s;
-}
-
-.ig {
-  background: #E1306C;
-}
-
-.cita {
-  background: #25D366;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-}
-
-
-
-
-
-
-@media (max-width: 768px) {
-  .integrantes {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .integrantes {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 760px) {
-  .servicios {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .servicios {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 760px) {
-  .contacto {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .contacto {
-    grid-template-columns: 1fr;
-  }
-}
-
-  </style>
+   
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Devsestética</title>
 </head>
 
 <body>
 
 <header>
-  <h1>DEVSTÉTICA</h1>
 
+<center><div class="logo-container">
+  <img src="img/logo.jpg" alt="Logo Devstética" class="logo"><h1>DEVSESTÉTICA</h1>
+</div></center>
+
+<!--Menu-->
   <nav>
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#quienes">¿Quienes somos?</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
+  <ul class="menu">
+
+    <li class="dropdown">
+      <a href="#">FACIAL</a>
+      <ul class="submenu">
+        <li><a href="#">Limpieza Facial</a></li>
+        <li><a href="#">Peeling</a></li>
+        <li><a href="#">Microneedling</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">CORPORAL</a>
+      <ul class="submenu">
+        <li><a href="#">Reductores</a></li>
+        <li><a href="#">Drenaje Linfático</a></li>
+        <li><a href="#">Modeladores</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">DEPILACIÓN LÁSER</a>
+      <ul class="submenu">
+        <li><a href="#">Zona chica</a></li>
+        <li><a href="#">Zona mediana</a></li>
+        <li><a href="#">Zona completa</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">MEDICINA ESTÉTICA</a>
+      <ul class="submenu">
+        <li><a href="#">Botox</a></li>
+        <li><a href="#">Rellenos</a></li>
+        <li><a href="#">Bioestimuladores</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">UÑAS</a>
+      <ul class="submenu">
+        <li><a href="#">Manicura</a></li>
+        <li><a href="#">Pedicura</a></li>
+        <li><a href="#">Kapping</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">MASAJES</a>
+      <ul class="submenu">
+        <li><a href="#">Relajantes</a></li>
+        <li><a href="#">Descontracturantes</a></li>
+        <li><a href="#">Deportivo</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#quienes">NOSOTROS</a></li>
+     <li><a href="#elegirnos">¿PORQUELEGIRNOS?</a></li>
+    <li><a href="#">SHOP</a></li>
+
+
+  </ul>
+</nav>
+
 </header>
 
+
+<section>
 
 <div id="inicio" class="center" >
   <p  class="principal"> Bienvenido a Devstética.</p> 
@@ -288,14 +99,41 @@ nav ul li a {
 
 </div>
 
+</section>
+
+
+<section id="quienes" class="equipo">
+ 
+  <h2> ¿Porque Elegirnos?.</h2>
+
+ 
+
+<h3> 	Equipo Médico </h3> 
+<br>
+<p>Ofrecemos un servicio integral con especialistas en numerosas áreas de la salud y la belleza. Cosmetólogas, Cosmiatras, Medica Esteticista, Masoterapeutas, Manicura, Nail Art y Especialistas</p>
+<p>Buscamos capacitarnos de manera continua para mantenernos siempre actualizados sobre las últimas tendencias.</p>
+<h3>	Tecnología de Vanguardia</h3>
+<br>
+<p>Buscamos fusionar el arte y la ciencia para brindar un servicio de máxima calidad.</p>
+<p>Constamos con los equipos más avanzados del sector, apostando siempre por la aparatología que brinde los mejores resultados y esté respaldada por los organismos nacionales e internacionales de la salud. </p>
+<br>
+<h3>	Protocolos Personalizados</h3>
+<br>
+<p>Realizamos un diagnóstico en cada caso, para brindar el tratamiento adecuado para cada necesidad.</p>
+  
+</div>
+
+</section>
+
+
 <section id="quienes" class="equipo">
 
-  <h2>Quiénes Somos</h2>
+  <h2>Sobre Nosotros </h2>
 
-  <!-- Foto grupal -->
-  <div class="foto-grupal">
-    <img src="img\equipo bienestar.png" alt="Equipo Devstética">
-  </div>
+  <div>
+  <p  style="color:#A6A6A6; font-size: xx-large; " n>Somos un centro especializado en estética y belleza, fundado desde 2019. </p>
+</div>
+
 
   <!-- Integrantes -->
   <div class="integrantes">
@@ -315,7 +153,7 @@ nav ul li a {
     <div class="persona">
       <img src="img\equipo 3.png" alt="servicio 3">
       <p class="nombre">Isabel Peralta</p>
-      <p class="rol">MIcroneedling</p>
+      <p class="rol">Microneedling</p>
     </div>
 
     <div class="persona">
@@ -329,6 +167,38 @@ nav ul li a {
       <p class="nombre">Antonela Pascuale</p>
       <p class="rol">Dermaplanning</p>
     </div>
+
+  </div>
+
+  <div>
+
+<section class="ubicacion">
+
+  <h2 class="titulo-ubicacion">¿Dónde estamos?</h2>
+
+  <div class="ubicacion-contenedor">
+
+    <!-- FOTO IZQUIERDA -->
+    
+<div class="ubicacion-texto">
+
+      <p>Actualmente estamos en Villa Crespo</p>
+      <p>Julián Álvarez 333</p>
+      <p>Piso 7 Depto F</p>
+
+      
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2741.0367454726593!2d-58.43932902425995!3d-34.60131237295516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca7251a97075%3A0xc2a082ce1da0cbee!2sJuli%C3%A1n%20%C3%81lvarez%20333%2C%20C1414DRG%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e1!3m2!1ses!2sar!4v1772234250858!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>  
+    <!-- DIRECCIÓN DERECHA -->
+      
+    
+<div class="ubicacion-imagen">
+      <img src="img/formato/DEVSTETICA.jpg" alt="Ubicación Devstética">
+    </div>
+  </div>
+
+</section>
+
 
   </div>
 
@@ -372,27 +242,55 @@ nav ul li a {
 </section>
 
 
-<section id="contacto" class="contacto">
+<a href="https://www.neocita.com/devsestetica" target="_blank" class="btn-flotante">
+  <i class="fa-solid fa-book-open"></i>
+  <span>Pide tu cita aquí</span>
+</a>
 
-  <h2>Contacto</h2>
-
-<div class="contacto-box">
-
-  <a href="https://www.instagram.com/devsestetica?igsh=MW8wZnAxODR3d201MQ==" target="_blank" class="btn ig">
-    <i class="fa-brands fa-instagram"></i>
-    <span>Instagram</span>
-    
-  </a>
-
-  <a href="https://www.neocita.com/devsestetica?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAP0IdxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafw3UkIeKNtxlPfmgwRJK874BPze5pgG_KNOZQljdeIqjVj4PdLQGBGqZDaLQ_aem_bOpcNPTJDRdcnnqq_ei2jw target="_blank" class="btn cita">
-    <i class="fa-solid fa-calendar-days"></i>
-    <span>Pedir Cita</span>
-  </a>
-
-</div>
 
 </section>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Logo / Marca -->
+    <div class="footer-col">
+      <h3>DEVSESTÉTICA</h3>
+      <p>Realzamos tu belleza natural con tratamientos personalizados y tecnología de vanguardia.</p>
+    </div>
+
+    <!-- Navegación -->
+    <div class="footer-col">
+      <h4>Secciones</h4>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#quienes">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Contacto -->
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <p>📍 Villa Crespo</p>
+      <p>📍 Julián Álvarez 333</p>
+      <p>📞 +54 11 0000-0000</p>
+      <p>✉️ contacto@devsestetica.com</p>
+    </div>
+
+    <!-- Redes -->
+    <div class="social-icons">
+  <a href="https://www.instagram.com/devsestetica" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+</div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Devsestética | Todos los derechos reservados</p>
+  </div>
+</footer>
+
 
 </body>
 </html>
-
